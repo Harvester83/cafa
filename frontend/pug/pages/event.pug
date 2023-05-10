@@ -1,0 +1,72 @@
+extends ../layout/page
+include ../mixins/mixins
+
+block title
+    | event
+
+
+
+block content
+    section.pb-108_media
+        .container
+            .row
+                .col-12
+                    .img-respond.event-img
+                        img(src="https://picsum.photos/1110/500?image=405" alt="")
+                        .img-content
+                            div.event-img__content
+                                span January 15, 2019
+                                h5.event-img__content-info 802 FIFTH AVE, SAN DIEGO CA 92101
+                            .event-img__gradient
+                .col-12.event-headline
+                    h1.content-headline Here is some update on our Azerbaijani night event
+                    .share
+                        .share-text
+                            p Share this
+                        .share-icon
+                            a(href="")
+                                +svg('soc-block__inner soc-block__inner_facebook','facebook')
+                            a(href="")
+                                +svg('soc-block__inner soc-block__inner_twitter','twitter')
+                            a(href="")
+                                +svg('soc-block__inner soc-block__inner_whatsapp','whatsapp')
+                            a(href="")
+                                +svg('soc-block__inner soc-block__inner_envelope','envelope')
+                            a(href="")
+                                +svg('soc-block__inner soc-block__inner_share','share')
+
+                .col-12
+                    .event-content
+                        p Dear friends and followers,
+                        p Here is some update on our Azerbaijani night event in San Diego on 21st of December, 2018. Chef Leyla has prepared for us an amazing menu which includes:
+                        ul
+                            li Dovga (yogurt soup with seasonal herbs)
+                            li Complimentary feykhoa compote (pineapple guava lemonade or compote)
+                            li Assorted Azerbaijani savory breads
+                            li Assorted Azerbaijani salads
+                            li Dolma (stuffed grape leaves)
+                            li Khan pilaf with chicken
+                            li Assorted Azerbaijani sweets with tea
+                        p Please note that food will be served in a set menu format. Event starts at 7 pm. Serving will start at 7.30 pm. Please be sure to give yourself enough time for arrival and parking. The parking instructions can be found at https://www.cafe-21.com/parking/
+                        p Ticket purchase deadline is December 18, 2018. Please follow the link https://www.cafe-21.com/event/azeri-night/… to reserve the seats.
+                        p While children are our joy and blessing due to the nature of the event and space limitation we are unable to accommodate anyone under the age of 14.
+                        p The detailed program of the event will be sent shortly to the ticket owners.
+
+                        .event__share-responsive
+                            .event-soc__order
+                                a(href="") book now
+                            .share
+                                .share-text
+                                    p Share this
+                                .share-icon
+                                    a(href="")
+                                        +svg('soc-block__inner soc-block__inner_facebook','facebook')
+                                    a(href="")
+                                        +svg('soc-block__inner soc-block__inner_twitter','twitter')
+                                    a(href="")
+                                        +svg('soc-block__inner soc-block__inner_whatsapp','whatsapp')
+                                    a(href="")
+                                        +svg('soc-block__inner soc-block__inner_envelope','envelope')
+                                    a(href="")
+                                        +svg('soc-block__inner soc-block__inner_share','share')
+

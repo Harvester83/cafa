@@ -1,0 +1,315 @@
+$menuAnimSpeed: 175ms;
+
+.navbar {
+  position: static;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  background-color: rgba(255, 255, 255, .25);
+  @media (max-width: 991px) {
+    background-color: transparent;
+  }
+
+  @media (max-width: 991px) {
+    background-color: transparent;
+  }
+}
+
+.nav-li {
+  position: relative;
+  @media (min-width: 992px) {
+    &:not(:first-child) {
+      margin-left: 0px;
+    }
+  }
+
+  @media (min-width: 1200px) {
+    &:not(:first-child) {
+      margin-left: 0px;
+    }
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, .25);
+    @media (max-width: 991px) {
+      background-color: transparent;
+      text-decoration: none;
+    }
+  }
+
+  &:hover > .nav__menu-lists li {
+    display: block;
+  }
+
+  @for $i from 1 through 5 {
+    &:hover > .nav__menu--2-lists li:nth-child(#{$i}) {
+      opacity: 0;
+      transform: translate(-100%, 50%);
+      animation: menu2 ease-in-out forwards;
+      animation-duration: $menuAnimSpeed;
+      animation-delay: ($menuAnimSpeed / 1.2) * ($i - 1);
+      position: absolute;
+      top: $i * 47px;
+      @keyframes menu2 {
+        0% {
+          opacity: 0;
+          transform: translateY(-100%) scale(.3);
+        }
+
+        100% {
+          opacity: 1;
+          transform: translateY(0) scale(1);
+        }
+      }
+
+      @media (max-width: 991px) {
+        animation: none;
+        opacity: 1;
+        transform: none;
+        position: relative;
+        top: 0;
+      }
+    }
+  }
+
+  .nav__menu-lists {
+    position: absolute;
+    top: 0px;
+    height: 46px;
+    width: 100%;
+    left: 0;
+    @media (max-width: 991px) {
+      display: none;
+      //outline: 1px solid #fff;
+      position: relative;
+      height: auto;
+    }
+  }
+
+  .nav__menu-items {
+    display: none;
+    width: 140px;
+    height: 100%;
+    background-color: #2036fc;
+    color: #fff !important;
+    z-index: 77777;
+    @media (max-width: 991px) {
+      display: block;
+      position: relative;
+      width: 100%;
+      background-color: transparent;
+    }
+    a {
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+      color: #fff !important;
+      &:hover {
+        color: #fff !important;
+      }
+      @media (max-width: 991px) {
+        padding: 2px 0;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.nav-link {
+  color: #fff;
+  font-size: 1.25rem;
+  line-height: 1.7;
+  @media (max-width: 1199px) {
+    font-size: 16px;
+    padding: .8rem 1rem;
+  }
+  &.active {
+    background-color: #1726A7;
+  }
+  &_accent {
+    background-color: $orange;
+    @media (max-width: 991px) {
+      text-align: center;
+      border-radius: 20px;
+      width: auto;
+      background-color: rgba(#fff, .1);
+    }
+  }
+  &_flex {
+    display: flex;
+    align-items: center;
+    @media (max-width: 991px) {
+      justify-content: center;
+    }
+  }
+  &:hover {
+    color: #fff;
+    background-color: #1726A7;
+    text-decoration: none;
+  }
+}
+
+.navbar-collapse {
+  @media (max-width: 991px) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    top: -700px;
+    left: 0;
+    width: 100%;
+    z-index: 77777;
+    position: fixed;
+    height: 100vh;
+    transition: all .3s ease-out;
+
+    .navbar-nav {
+      //border: 10px solid #f00; //*
+
+      width: 100%;
+      height: 90%;
+      background: #1726A7;
+      justify-content: start;
+      align-items: center;
+      overflow: scroll;
+
+      ///***
+      top: 45px;
+      position: relative;
+    }
+
+    .nav-li {
+      width: 45%;
+      padding: 0;
+      text-align: center;
+      &_accent {
+        @media (max-width: 991px) {
+          width: auto;
+          margin-top: 30px;
+        }
+      }
+    }
+
+    .nav-link {
+      color: #fff;
+      font-size: 20px;
+      font-family: $font;
+      padding: 15px;
+      @media (max-width: 991px) {
+        padding: 5px;
+      }
+
+      &_accent {
+        @media (max-width: 991px) {
+          padding: 5px 20px;
+        }
+      }
+      text-decoration: none;
+
+      &.active {
+        font-family: $font-bold;
+        background-color: transparent;
+      }
+
+      &:hover {
+        color: #fff;
+        text-decoration: none;
+        background-color: transparent;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    flex-direction: column-reverse;
+    align-items: left;
+  }
+
+  @media (min-width: 1200px) {
+    flex-direction: row;
+    align-items: center
+  }
+}
+
+.navbar-collapse.show {
+  //border: 5px solid #fff; ////////////////////////////////////////////////////
+  background: #1726A7; ///////////
+  @media (max-width: 991px) {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 77777;
+    position: fixed;
+    height: 100vh;
+    transition: all .3s ease-out;
+  }
+}
+
+.navbar-toggler {
+  //border: 1px solid #fff;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+
+  &_md_fixed {
+    @media (max-width: 991px) {
+      position: fixed;
+      right: 15px;
+      z-index: 9999999;
+      height: 30px;
+      width: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+#nav-icon {
+  width: 20px;
+  height: 10px;
+  position: relative;
+  transform: rotate(0deg);
+  transition: .5s ease-in-out;
+  cursor: pointer;
+  span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 20px;
+    background: #FF7764;
+    border-radius: 1.5px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+    &:nth-child(1) {
+      top: 0;
+      transform-origin: left center;
+    }
+    &:nth-child(2) {
+      top: 8px;
+      transform-origin: left center;
+    }
+  }
+}
+
+#nav-icon.open span:nth-child(1) {
+  transform: rotate(45deg);
+  top: -3px;
+}
+
+#nav-icon.open span:nth-child(2) {
+  transform: rotate(-45deg);
+  top: 11px;
+}
+
+.nav-link-icon {
+  fill: #fff;
+  width: 11px;
+  height: 14px;
+  margin-right: 7px;
+}

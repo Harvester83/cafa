@@ -1,0 +1,97 @@
+extends ../layout/page
+include ../mixins/mixins
+
+block title
+    | blogs-inner
+
+block content
+    section.section_pb
+        .container
+            .row
+                .col-xl-8
+                    .blogs-inner__headline
+                        h1 Blogs
+                .col-xl-4.blog-papulation__title.blog-papulation__title_res
+                    h2 Popular posts
+        .container
+            .row
+                .col-xl-8
+                    .img-respond.blogs-inner__img
+                        img.blog-inner-img(src="https://picsum.photos/1110/800?image=405" alt="")
+                        .blogs-inner__author.col-12
+                            .col-md-2.offset-md-1.p-0
+                                .blogs-inner__author-img
+                                    img(src="http://i.pravatar.cc/150?img=13" alt="")
+                            .blogs-inner__info.col-md-9.p-0
+                                .blogs-inner__info-name
+                                    h2 This Is the Name of the Newsor a placeholder text
+                                    .blogs-inner__info-time
+                                        a(href="") Posted by Admin
+                                        +svg('blogs-inner__clock','clock')
+                                        span 19 hours ago
+                                .author_soc-link
+                                    a(href="")
+                                        +svg('soc-blog_author','facebook')
+                                    a(href="")
+                                        +svg('soc-blog_author','twitter')
+                                    a(href="")
+                                        +svg('soc-blog_author','linkedin')
+
+                        .blogs-inner__author-responsive
+                            .col-12
+                                .blogs-inner__author_admin
+                                    a(href="")
+                                        +svg('clock-style','clock')
+                                        span 19 hours ago
+                                h2 This Is the Name of the Newsor a placeholder text
+                                span.border-top_span Posted by Admin
+
+                        .blogs-inner__author-responsive_img
+                            img(src="http://i.pravatar.cc/150?img=13" alt="")
+                            .author_soc-link-responsive
+                                a(href="")
+                                    +svg('soc-blog_author','facebook')
+                                a(href="")
+                                    +svg('soc-blog_author','twitter')
+                                a(href="")
+                                    +svg('soc-blog_author','linkedin')
+                    .blogs-inner__text.blogs-inner_text_mb50_res
+                        p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        p The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+                        h3 Where can I get some?
+                        p There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+                        h3 Where does it come from?
+                        p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                        p The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
+
+                        .share
+                            .share-text
+                                p Share this article
+                            .share-icon
+                                a(href="")
+                                    +svg('soc-block__inner soc-block__inner_facebook','facebook')
+                                a(href="")
+                                    +svg('soc-block__inner soc-block__inner_twitter','twitter')
+                                a(href="")
+                                    +svg('soc-block__inner soc-block__inner_whatsapp','whatsapp')
+                                a(href="")
+                                    +svg('soc-block__inner soc-block__inner_envelope','envelope')
+                                a(href="")
+                                    +svg('soc-block__inner soc-block__inner_share','share')
+
+                .col-xl-4
+                    .col-12.p-0
+                        each val in [1, 2, 3]
+                            a(href="")
+                                .blog-papulation__post.blog-papulation__post_mb15
+                                    .blog-papulation__img.zoom-effect
+                                        img.zoom-img.img-respond(src="https://picsum.photos/1110/800?image=405" alt="")
+                                    .blog-papulation__content
+                                        p.blog-papulation__text This Is the Name of the Newsor a placeholder textThis Is the Name of the Newsor a placeholder text
+                                        .blog-papulation__info
+                                            span.blog-papulation__info-adder Posted by Admin
+                                            span.span-border
+                                            .blog-papulation__svg
+                                                +svg('blogs-papulation__clock','clock')
+                                                span.blogs-papulation__info-time 19 hours ago
+

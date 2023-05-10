@@ -1,0 +1,71 @@
+extends ../layout/page
+include ../mixins/mixins
+
+block title
+    | job-posts-inside
+
+block content
+    section.section_pb
+        .container
+            .job-post
+                .row
+                    .col-12
+
+                        .jobs-posts-inside-text
+
+                            .header-block.header-block_flex
+                                .text-left
+                                    h1.title-h2.mr-3 Graphic Designer
+                                    p.lead.d-lg-block.d-none Identified Talent Solutions
+
+                                    a.promo__meta-link(href="#")
+                                        +svg('promo__meta-icon','map-marker-02')
+                                        | North Hollywood, CA
+
+
+                                .form-submit
+                                    button.form-submit__button(type="submit" name="submit") Apply
+
+
+                            p We are looking for a world class designer to join the Product Imagery team. You will be partnering with creative producers, external agencies, freelancers and other internal designers to create visually stunning and effective artwork for our titles within the Netflix member experience. You’re smart, confident, highly competent—and mature enough not to have an ego. You’re a skilled communicator who welcomes honest, candid feedback. As a member of our design team, you'll be one of the architects of our mission and help build Netflix into a global Internet TV network.
+                            h3 About the job
+                            ul
+                                li Conceive, create and direct inspiring, high-quality creative at scale.
+                                li Demand excellence and have a clear POV on quality.
+                                li Build strong relationships with cross functional partners in a fast paced environment.
+                                li Develop systems for creating high-quality work that require short timelines.
+
+                            h3 The Right Stuff
+                            ul
+                                li 7+ years working within a digital, creative environment (agency and/or in-house) for a tech/entertainment/consumer brand.
+                                li Proven ability to create and direct high-quality creative (portfolio required).
+                                li Expert in all aspects of developing creative in a digital, product or user-centric space.
+                                li Passionate about producing data-informed, measurable effective artwork.
+                                li Able to build strong cross functional relationships with both technical and creative partners.
+                                li Excellent communication and collaboration skills.
+                                li Self-motivated with the ability to work independently.
+                                li Understand, advocate, and embody the company’s values and team goals.
+                                li A good sense of humor.
+                                li A love of movies and TV shows.
+                            h3 Why work at Netflix:
+                            p
+                                | If you are looking to have a large impact at a growing company and work with a high performance team. Work with talented colleagues on hard problems that affect 100+ million members across the globe.
+                                br
+                                | We value high performance, freedom and responsibility. We don't focus on rules, processes or procedures. We are candid and transparent and seek excellence in all that we do.
+                                br
+                                | We tackle hard problems that others have not been able to solve. We produce great content, build systems at scale and use data to push the business forward. We connect people with movies and television globally.
+
+                            .share
+                                .share-text
+                                    p Share this
+                                .share-icon
+                                    a(href="")
+                                        +svg('soc-block__inner soc-block__inner_facebook','facebook')
+                                    a(href="")
+                                        +svg('soc-block__inner soc-block__inner_twitter','twitter')
+                                    a(href="")
+                                        +svg('soc-block__inner soc-block__inner_whatsapp','whatsapp')
+                                    a(href="")
+                                        +svg('soc-block__inner soc-block__inner_envelope','envelope')
+                                    a(href="")
+                                        +svg('soc-block__inner soc-block__inner_share','share')

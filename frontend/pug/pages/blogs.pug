@@ -1,0 +1,40 @@
+extends ../layout/page
+include ../mixins/mixins
+
+block title
+    | about-us
+
+block content
+    section.section_pb
+        .container
+            .row
+                .col-12
+                    h1.title-h1.title-h1_mb_sm Blogs
+
+                each val in [1, 2, 3, 4, 5, 6]
+                    .col-lg-6
+                        a(href="").img-respond.blogs-img
+                            img(src="https://picsum.photos/1110/500?image=472" alt="#")
+                            .blogs-img__content
+                                .blogs__info-time
+                                    +svg('blogs-inner__clock','clock')
+                                    span 19 hours ago
+                                h2 This Is the Name of the Newsor a placeholder text
+                                span Posted by Admin
+
+
+            ul.pagination-list
+                li.pagination-list__item.pagination-list__item_dirrect
+                    a(href="#").pagination-list__item-link
+                        +svg('pagination-list__icon', 'double-arrow')
+
+                li.pagination-list__item
+                    a(href="#").pagination-list__item-link.active 1
+
+                each val in [2, 3, 4, 5, 6]
+                    li.pagination-list__item
+                        a(href="#").pagination-list__item-link=val
+
+                li.pagination-list__item.pagination-list__item_dirrect
+                    a(href="#").pagination-list__item-link
+                        +svg('pagination-list__icon pagination-list__icon_rt', 'double-arrow')

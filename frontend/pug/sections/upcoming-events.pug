@@ -1,0 +1,47 @@
+.container
+    .row
+        .col-12
+            .header-block.header-block_mb
+                h2#upcomingEvents.title-h2 Upcoming Events
+                p.lead Upcoming Cultural Events in California for Azerbaijanis
+
+.wrap-block-slider.wrap-block-slider_mb.block_js
+    .block-slider.owl-carousel
+        each val in [1, 2, 3, 4, 5, 6, 7]
+            - var num = val + 578
+            .block.item
+                .block__meta
+                    .block__date Feburary 0#{val}, <br> 2019
+
+                .block__header
+                    div.block__header-block
+                        h3.block__title Event name
+                        p.block__desc 525/750 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae cum eligendi nemo numquam sunt. Optio...
+
+                    .block__wrap-button
+                        a(href="habr.ru").block__button
+                            +svg('block__button-icon', 'arrow-link')
+                            span.block__button-text book now
+
+                picture
+                    source(media="(max-width: 380px)" srcset="https://picsum.photos/290/560?image=" + num)
+                    img.block__img(src="https://picsum.photos/350/500?image=" + num)
+
+                .block__cover
+                    .block__cover-in
+
+
+    button(type="button" role="presentation" class="owl-nav-button owl-prev customPrevBtn")
+        +svg('arrow-icon', 'arrow')
+
+    button(type="button" role="presentation" class="owl-nav-button owl-next customNextBtn")
+        +svg('arrow-icon arrow-icon_rotate_180', 'arrow')
+
+.container.container_mb-mid
+    .text-center
+        a(href="#").button-link.button-link_mod_center
+            +svg("button-link__icon", "plus")
+            span View all
+
+a(href="#goTop").arrow-up__index.js-anchor-link
+    +svg('arrow-up__index-icon', 'up-arrow')

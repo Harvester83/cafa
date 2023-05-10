@@ -1,0 +1,59 @@
+div.wrapper-viewport#goTop
+    .slider-wrap
+        .slider.owl-carousel.owl-theme
+            .slider__item.item
+                picture
+                    source(media="(max-width: 300px)" srcset="https://picsum.photos/320/520?image=579")
+                    source(media="(max-width: 767px)" srcset="https://picsum.photos/800/1200?image=579")
+                    source(media="(min-width: 768px)" srcset="https://picsum.photos/1920/900?image=579")
+                    img.slider-item__img(src="https://picsum.photos/1920/900?image=579")
+
+            .slider__item.item
+                picture
+                    source(media="(max-width: 300px)" srcset="https://picsum.photos/320/520?image=582")
+                    source(media="(max-width: 767px)" srcset="https://picsum.photos/800/1200?image=582")
+                    source(media="(min-width: 768px)" srcset="https://picsum.photos/1920/900?image=582")
+                    img.slider-item__img(src="https://picsum.photos/1920/900?image=582")
+
+            .slider__item.item
+                picture
+                    source(media="(max-width: 300px)" srcset="https://picsum.photos/320/520?image=581")
+                    source(media="(max-width: 767px)" srcset="https://picsum.photos/800/1200?image=581")
+                    source(media="(min-width: 768px)" srcset="https://picsum.photos/1920/900?image=581")
+                    img.slider-item__img(src="https://picsum.photos/1920/900?image=581")
+
+            .slider__item.item
+                picture
+                    source(media="(max-width: 300px)" srcset="https://picsum.photos/320/520?image=588")
+                    source(media="(max-width: 767px)" srcset="https://picsum.photos/800/1200?image=588")
+                    source(media="(min-width: 768px)" srcset="https://picsum.photos/1920/900?image=588")
+                    img.slider-item__img(src="https://picsum.photos/1920/900?image=588")
+
+            .slider__item.item
+                picture
+                    source(media="(max-width: 300px)" srcset="https://picsum.photos/320/520?image=600")
+                    source(media="(max-width: 767px)" srcset="https://picsum.photos/800/1200?image=600")
+                    source(media="(min-width: 768px)" srcset="https://picsum.photos/1920/900?image=600")
+                    img.slider-item__img(src="https://picsum.photos/1920/900?image=600")
+
+        .main-section
+            .owl-dots
+            h1.main-section__title California Azerbaijan Friendship Association
+            p.main-section__desc The first ever organization uniting the vibrant Azerbaijani community
+
+            .soc-block.soc-block_ma
+                a(href="#").soc-block__item
+                    +svg('soc-block__icon soc-block__icon_facebook', 'facebook')
+                a(href="#").soc-block__item
+                    +svg('soc-block__icon soc-block__icon_twitter', 'twitter')
+                a(href="#").soc-block__item
+                    +svg('soc-block__icon soc-block__icon_linkedin', 'linkedin')
+                a(href="#").soc-block__item
+                    +svg('soc-block__icon soc-block__icon_google', 'google')
+                a(href="#").soc-block__item
+                    +svg('soc-block__icon soc-block__icon_youtube', 'youtube')
+
+    .arrow-down-block
+        button.arrow-down-block__button
+            a(href="#upcomingEvents").js-anchor-link
+                +svg('arrow-down-block__icon', 'down-arrow')

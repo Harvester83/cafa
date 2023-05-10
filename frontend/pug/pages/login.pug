@@ -1,0 +1,37 @@
+extends ../layout/page
+include ../mixins/mixins
+
+block title
+    | login
+
+block content
+    section.pb-100_login
+        .container
+            .row
+                .col-lg-6.offset-lg-3.col-md-8.offset-md-2
+                    .login
+                        h1.login-headline Login
+
+                        form(action="" method="" id="login-form")
+                            .wrap-form.wrap-form_mb
+                                .input-field.input-field_w_100.input-field_mb_15
+                                    input.input-field__input(
+                                        type="text"
+                                        placeholder="Login or Email"
+                                        name="loginName"
+                                        id="loginName"
+                                        required
+                                    )
+                                .input-field.input-field_w_100.input-field_mb_15
+                                    input.input-field__input(
+                                        type="password"
+                                        placeholder="Password"
+                                        name="loginPassword"
+                                        id="loginPassword"
+                                        required
+                                    )
+                            .form-submit.form-submit_center
+                                input.form-submit__button(type="submit" name="submit" value="LOGIN")
+
+                        p.note.note_center Don’t have an account? <a class="font-bold" href="#">Create one.</a>
+

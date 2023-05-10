@@ -1,0 +1,41 @@
+.container.container_mb-mid
+    .row
+        .col-12
+            .header-block.header-block_flex
+                h1.title-h2.title-h2_wrap
+                    a(href="#").link News
+                span.label-item Latest news from CAFA
+
+
+        .col-lg-6.col-12
+            .relative
+                a(href="")
+                    .zoom-effect
+                        img.zoom-img.img-respond(src="https://picsum.photos/540/400?image=405" alt="")
+
+                    .header-pane.header-pane_mob_mb
+                        .header-pane__container
+                            h3.header-pane__title.header-pane__title_s_20 This Is the Name of the News or a placeholder text
+                            span.header-pane__span Posted by Admin
+
+                        .header-pane__meta
+                            +svg('header-pane__icon','clock')
+                            span.header-pane__meta-date 20 hours ago
+
+        .col-lg-6
+            .news-item-wrap
+                each val in [1, 2, 3]
+                    .news-item-box
+                        .news-item
+                            a(href="#").d-flex
+                                .zoom-effect.zoom-effect_w-150
+                                    img.zoom-img.news-item__img(src="https://picsum.photos/500/400?image=405" alt="")
+
+                                .news-item-content-wrap
+                                    .news-item__header
+                                        h3.news-item__title This Is the Name of the News or a placeholder text
+                                        .news-item__span-wrap
+                                            span Posted by Admin
+                                    .news-item__label
+                                        +svg('header-pane__icon','clock')
+                                        span.news-item__label-span 19 hours ago

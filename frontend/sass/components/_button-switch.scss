@@ -1,0 +1,30 @@
+.button-switch-wrap {
+  margin-bottom: 35px;
+}
+
+.button-switch {
+  font-family: $font-medium-montserrat;
+  padding-left: 18px;
+  padding-right: 18px;
+  border:none;
+  color: $color;
+  background-color: transparent;
+  font-size: 1.75rem;
+
+  &.active {
+    font-family: $font-bold-montserrat;
+    position: relative;
+    &:after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      border-bottom: 4px solid $color;
+      content: "";
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

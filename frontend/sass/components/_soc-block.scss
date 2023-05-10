@@ -1,0 +1,146 @@
+.soc-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  @media (max-width: 320px) {
+    width: 100%;
+  }
+
+  &_ma {
+    margin: 0 auto;
+  }
+
+  &_ma-mb_55 {
+    margin: 0 auto 3.4375rem;
+    @media (max-width: 575px) {
+      margin: 0 auto 30px;
+    }
+  }
+
+  &_pb {
+    padding-bottom: 1.75rem;
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    @media (max-width: 575px) {
+      width: 17px;
+      height: 17px;
+    }
+    transition: all 2s ease-in-out;
+    &:not(:last-child) {
+      margin-right: 1.563rem;
+    }
+
+    &:hover {
+      text-decoration: none;
+      color: #fff;
+    }
+
+    &:after {
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      content: "";
+      border-bottom: 2px solid transparent;
+      transition: all .3s ease-in-out;
+      width: 25px;
+      @media (max-width: 575px) {
+        width: 17px;
+      }
+    }
+
+    &:hover:after {
+      border-bottom: 2px solid #fff;
+    }
+  }
+
+  &__icon {
+    fill: #fff;
+    margin: auto;
+    &_facebook {
+      width: 12px;
+      height: 24px;
+      @media (max-width: 575px) {
+        width: 8px;
+        height: 16px;
+      }
+    }
+    &_twitter {
+      width: 24px;
+      height: 25px;
+      @media (max-width: 575px) {
+        width: 16px;
+        height: 13px;
+      }
+    }
+    &_linkedin {
+      width: 20px;
+      height: 22px;
+      @media (max-width: 575px) {
+        width: 13px;
+        height: 14px;
+      }
+    }
+    &_google {
+      width: 24px;
+      height: 24px;
+      @media (max-width: 575px) {
+        width: 16px;
+        height: 16px;
+      }
+    }
+    &_youtube {
+      width: 25px;
+      height: 18px;
+      @media (max-width: 575px) {
+        width: 17px;
+        height: 12px;
+      }
+    }
+  }
+}
+
+.soc-block__inner {
+  fill: #fff;
+  height: 29px;
+  width: 29px;
+  border-radius: 50%;
+
+  &_facebook {
+    background: #3B5998;
+    padding-top: 6px;
+    padding-bottom: 6px;
+  }
+  &_twitter {
+    background: #55ACEE;
+    padding-top: 7.6px;
+    padding-bottom: 7.6px;
+  }
+  &_whatsapp {
+    background: #25D366;
+    padding-top: 4.5px;
+    padding-bottom: 5.5px;
+  }
+  &_envelope {
+    background: #0971BD;
+    padding-top: 5.8px;
+    padding-bottom: 5.8px;
+  }
+  &_share {
+    background: #228CC4;
+    padding-top: 5.2px;
+    padding-bottom: 4.7px;
+  }
+}
+
+.soc-blog_author {
+  fill: #555555;
+  height: 19px;
+  width: 19px;
+}

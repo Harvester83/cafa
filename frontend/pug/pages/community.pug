@@ -1,0 +1,119 @@
+extends ../layout/page
+include ../mixins/mixins
+
+block title
+    | community
+
+block content
+    section.section_pb
+        .container
+            .header-block.header-block_flex.header-block_tab_flex_column.header-block_mb
+                ._wrap-md-flex._wrap-md-flex_mb_15._wrap-md-flex_res_350
+                    .text-left
+                        h1.title-h2.mr-3 Community
+                        p.lead.d-lg-block.d-none Find and create threads to get answers
+
+                    form.search.search_diplay-tab(action="#" method="POST")
+                        input(type="search" placeholder="Search...")
+                        label
+                            input(type="submit" )
+                            +svg('search-zoom','zoom')
+
+                ._wrap-md-flex
+                    .list-title-wrap.list-title-wrap_mob_w
+                        h4.list-title.list-title_center.list-title_mod  Categories
+                            +svg('down-solid_community','down-solid')
+                        ul.list.list_slider
+                            li.list__item
+                                a(href="#").list__item-link.active General
+                            li.list__item
+                                a(href="#").list__item-link Job post
+                            li.list__item
+                                a(href="#").list__item-link Recent admissions
+                            li.list__item
+                                a(href="#").list__item-link Travel
+                            li.list__item
+                                a(href="#").list__item-link Meetups
+                            li.list__item
+                                a(href="#").list__item-link Events
+                            li.list__item
+                                a(href="#").list__item-link Visa
+                            li.list__item
+                                a(href="#").list__item-link Newcomers
+                            li.list__item
+                                a(href="#").list__item-link New policies
+                            li.list__item
+                                a(href="#").list__item-link Other
+
+                    a.button-anchor.button-anchor_mob_w(href="#") Ask a question
+
+            .row
+                aside.aside-col
+                    .block-position-fixed
+                        form.search.search_mb(action="#" method="POST")
+                            input(type="search" placeholder="Search...")
+                            label
+                                input(type="submit" )
+                                +svg('search-zoom','zoom')
+
+                        h4.list-title Categories
+                        ul.list
+                            li.list__item
+                                a(href="#").list__item-link.active General
+                            li.list__item
+                                a(href="#").list__item-link Job post
+                            li.list__item
+                                a(href="#").list__item-link Recent admissions
+                            li.list__item
+                                a(href="#").list__item-link Travel
+                            li.list__item
+                                a(href="#").list__item-link Meetups
+                            li.list__item
+                                a(href="#").list__item-link Events
+                            li.list__item
+                                a(href="#").list__item-link Visa
+                            li.list__item
+                                a(href="#").list__item-link Newcomers
+                            li.list__item
+                                a(href="#").list__item-link New policies
+                            li.list__item
+                                a(href="#").list__item-link Other
+
+                article.blank-col
+                    each val in [1, 2, 3]
+                        section.blank-wrap.blank-wrap_mb
+                            section.info-label.info-label_dark_bg
+                                .info-label__header
+                                    img.info-label__img.info-label__img_m(src="http://i.pravatar.cc/30?img=13")
+                                    p <span class="info-label__span">johndoe</span> asked this 19 hours ago
+
+                                .info-label__meta-wrap.d-none-res
+                                    .info-label__meta.info-label__meta_mr
+                                        +svg('info-label__meta-icon info-label__meta-icon_mr', 'eye')
+                                        span.info-label__meta-data 120
+                                    .info-label__meta.info-label__meta_mr
+                                        +svg('info-label__meta-icon info-label__meta-icon_mr', 'like')
+                                        span.info-label__meta-data 9
+                                    .info-label__meta.info-label__meta_mr
+                                        +svg('info-label__meta-icon info-label__meta-icon_mr', 'comment')
+                                        span.info-label__meta-data 34
+
+                            section.blank-layout
+                                .title-h3.title-h3_montserrat What is the best way to get American Visa?
+                                p Hello there. My name is John, I live in Baku, Azerbaijan. I would like to know what are the best ways to get American Visa. I
+
+                            .d-block-res
+                                .info-label__meta-wrap.info-label__meta-wrap_meta-wrap_p
+                                    .info-label__meta.info-label__meta_mr
+                                        +svg('info-label__meta-icon info-label__meta-icon_mr', 'eye')
+                                        span.info-label__meta-data 120
+                                    .info-label__meta.info-label__meta_mr
+                                        +svg('info-label__meta-icon info-label__meta-icon_mr', 'like')
+                                        span.info-label__meta-data 9
+                                    .info-label__meta.info-label__meta_mr
+                                        +svg('info-label__meta-icon info-label__meta-icon_mr', 'comment')
+                                        span.info-label__meta-data 34
+
+
+
+

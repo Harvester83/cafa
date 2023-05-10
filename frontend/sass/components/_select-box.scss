@@ -1,0 +1,42 @@
+.select-box {
+  color: #fff;
+  background-color: $color;
+  font-size: 20px;
+  font-family: $font;
+  padding: 10px 17px;
+  appearance: none;
+  border: none;
+  position: relative;
+  &_w-100 {
+    @media (max-width: 575px) {
+      width: 100%;
+    }
+  }
+  &:focus {
+    outline: none;
+  }
+  option {
+    background-color: #fff;
+    color: #353535;
+  }
+}
+
+.down-solid_community-message {
+  fill: #fff;
+  height: 16px !important;
+  width: 16px !important;
+  margin-left: 3px;
+  position: absolute;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  right: 0;
+  top: 50%;
+}
+
+.header-block__select-box {
+  position: relative;
+
+  @media (max-width: 575px) {
+    width: 100%;
+  }
+}

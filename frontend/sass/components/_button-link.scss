@@ -1,0 +1,23 @@
+.button-link {
+  background: rgba(0, 12, 117, 0.1);
+  color: $color;
+  font-family: $font-bold;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 18px 0px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_mod_center {
+    width: 140px;
+    margin: auto;
+  }
+
+  &__icon {
+    fill: $color;
+    width: 14px;
+    height: 14px;
+    margin-right: 5px;
+  }
+}

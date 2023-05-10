@@ -1,0 +1,55 @@
+extends ../layout/page
+include ../mixins/mixins
+
+block title
+    | community-message
+
+block content
+    section.section_pb
+        .container
+            form(method="POST" action="#")
+                .header-block.header-block_flex.header-block_mob_flex_column.header-block_mob_align_star.header-block_mb
+                    .text-left
+                        h1.title-h2.title-h2_mob_mb Ask your question
+                    .header-block__select-box
+                        +svg('down-solid_community-message','down-solid')
+                        select.select-box.select-box_w-100
+                            option(value="volvo") General
+                            option(value="volvo") Job post
+                            option(value="volvo") Recent admissions
+                            option(value="volvo") Travel
+
+                .row
+                    aside.aside-col
+                        .block-position-fixed
+                            h4.list-title Categories
+                            ul.list
+                                li.list__item
+                                    a(href="#").list__item-link.active General
+                                li.list__item
+                                    a(href="#").list__item-link Job post
+                                li.list__item
+                                    a(href="#").list__item-link Recent admissions
+                                li.list__item
+                                    a(href="#").list__item-link Travel
+                                li.list__item
+                                    a(href="#").list__item-link Meetups
+                                li.list__item
+                                    a(href="#").list__item-link Events
+                                li.list__item
+                                    a(href="#").list__item-link Visa
+                                li.list__item
+                                    a(href="#").list__item-link Newcomers
+                                li.list__item
+                                    a(href="#").list__item-link New policies
+                                li.list__item
+                                    a(href="#").list__item-link Other
+
+                    article.blank-col
+                        textarea.messsage-textarea.messsage-textarea_headline(rows="1" placeholder="Headline...")
+                        .summernote
+
+                        .editor.editor_mb(id="editor")
+
+                        .form-submit
+                            button.form-submit__button(type="submit" name="submit") Submit

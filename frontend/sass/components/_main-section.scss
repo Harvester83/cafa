@@ -1,0 +1,82 @@
+.main-section {
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  z-index: 130;
+  bottom: 75px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  background-color: transparent;
+  text-align: center;
+  color: #FFFFFF;
+  padding: 0 10px 27px 10px;
+  @media (max-width: 575px) {
+    padding: 0 10px 0px 10px;
+  }
+
+  &__title {
+    font-family: $font-bold-montserrat;
+    line-height: 1;
+    margin-bottom: 10px;
+    font-size: 2.25rem;
+    @media (max-width: 575px) {
+      font-size: 20px;
+      line-height: 27px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__desc {
+    margin-bottom: 15px;
+    @media (max-width: 575px) {
+      margin-bottom: 7px;
+    }
+  }
+
+  .owl-dots {
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    width: 200px;
+    margin: 0 auto 20px;
+    @media (max-width: 575px) {
+      margin: 0 auto 10px;
+    }
+
+    .owl-dot {
+      width: 10px;
+      height: 10px;
+      padding: 0;
+      display: flex;
+      border: none;
+      background-color: transparent;
+      &:focus {
+        outline: none;
+      }
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+      span {
+        display: block;
+        width: 10px;
+        height: 10px;
+        margin: auto;
+        @media (max-width: 575px) {
+          width: 7px;
+          height: 7px;
+        }
+        border-radius: 50%;
+        background-color: rgba(#fff, .5);
+        transition: all .3s ease-in-out;
+      }
+    }
+
+    .owl-dot.active {
+      span {
+        background-color: rgba(#fff, 1);
+        transform: scale(1.5);
+      }
+    }
+  }
+}

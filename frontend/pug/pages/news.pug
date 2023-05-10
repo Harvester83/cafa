@@ -1,0 +1,60 @@
+extends ../layout/page
+include ../mixins/mixins
+
+block title
+    | news
+
+block content
+    section.section_pb
+        .container
+            .row.row_mb
+                .col-12
+                    .header-block.header-block_flex
+                        h1.title-h2 NEWS
+                        span.label-item Latest news from CAFA
+
+                    .relative
+                        a(href="#")
+                            .zoom-effect
+                                img.zoom-img.img-respond(src="https://picsum.photos/1110/400?image=405" alt="")
+
+                            .header-pane.header-pane_mb
+                                .header-pane__container
+                                    h3.header-pane__title This Is the Name of the News or a placeholder text
+                                    span.header-pane__span Posted by Admin
+
+                                .header-pane__meta
+                                    +svg('header-pane__icon','clock')
+                                    span.header-pane__meta-date 20 hours ago
+
+                each val in [1, 2, 3, 4, 5, 6]
+                    .col-xl-6.news-item-box
+                        .news-item
+                            a(href="#").d-flex
+                                .zoom-effect.zoom-effect_w-150
+                                    img.zoom-img.news-item__img(src="https://picsum.photos/500/400?image=405" alt="")
+
+                                .news-item-content-wrap
+                                    .news-item__header
+                                        h3.news-item__title This Is the Name of the News or a placeholder text
+                                        .news-item__span-wrap
+                                            span Posted by Admin
+                                    .news-item__label
+                                        +svg('header-pane__icon','clock')
+                                        span.news-item__label-span 19 hours ago
+
+            ul.pagination-list
+                li.pagination-list__item.pagination-list__item_dirrect
+                    a(href="#").pagination-list__item-link
+                        +svg('pagination-list__icon', 'double-arrow')
+
+                li.pagination-list__item
+                    a(href="#").pagination-list__item-link.active 1
+
+                each val in [2, 3, 4, 5, 6]
+                    li.pagination-list__item
+                        a(href="#").pagination-list__item-link=val
+
+                li.pagination-list__item.pagination-list__item_dirrect
+                    a(href="#").pagination-list__item-link
+                        +svg('pagination-list__icon pagination-list__icon_rt', 'double-arrow')

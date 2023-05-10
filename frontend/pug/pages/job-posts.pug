@@ -1,0 +1,63 @@
+extends ../layout/page
+include ../mixins/mixins
+
+block title
+    | job-posts
+
+block content
+    section.section_pb
+        .container
+            .row.row_mb
+                .col-12
+
+                    .header-block.header-block_flex
+                            .text-left
+                                h1.title-h2.mr-3 Job posts
+                                p.lead.d-lg-block.d-none Classifieds ads in California for Azerbaijanis
+
+                            form.search.search_w_min(action="#" method="POST")
+                                input(type="search" placeholder="Search...")
+                                label
+                                    input(type="submit" )
+                                    +svg('search-zoom','zoom')
+
+
+                each val in [1, 2, 3, 4]
+                    .col-12.promo-mb.promo-mb_section
+                        .promo
+                            .promo__content
+                                .promo__header
+                                    h3.promo__title
+                                        a(href="#").promo__title-link Database Programmer
+                                    h4.promo__subtitle Identified Talent Solutions
+
+                                .promo__content-wrap
+                                    .promo__info
+                                        h5.promo__info-title Qualifications:
+                                        p.promo__text - PHP - Solid experience with general programming tasks. Needs to fully understand conditional...
+                                            a.promo__more(href="#") read more
+
+                                .promo__meta
+                                    a.promo__meta-link(href="#")
+                                        +svg('promo__meta-icon','map-marker-02')
+                                        | North Hollywood, CA
+
+                            button.promo__button(type="submit") Apply
+
+
+
+            ul.pagination-list
+                li.pagination-list__item.pagination-list__item_dirrect
+                    a(href="#").pagination-list__item-link
+                        +svg('pagination-list__icon', 'double-arrow')
+
+                li.pagination-list__item
+                    a(href="#").pagination-list__item-link.active 1
+
+                each val in [2, 3, 4, 5, 6]
+                    li.pagination-list__item
+                        a(href="#").pagination-list__item-link=val
+
+                li.pagination-list__item.pagination-list__item_dirrect
+                    a(href="#").pagination-list__item-link
+                        +svg('pagination-list__icon pagination-list__icon_rt', 'double-arrow')

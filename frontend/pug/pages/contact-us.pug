@@ -1,0 +1,54 @@
+extends ../layout/page
+include ../mixins/mixins
+
+block title
+    |contact-us
+
+block content
+    section.section_pb
+        .container
+            .row
+                .col-12
+                    h1.contact-headline Contact us
+                .col-xl-7.col-lg-7
+                    form(id="contact-form" action="#" method="POST")
+                        .wrap-form.wrap-form_mb_12
+                            .input-field.input-field_w_50.input-field_offset.input-field_mb_15
+                                input.input-field__input(
+                                    type="text"
+                                    name="name"
+                                    id="contact-name"
+                                    required placeholder="Name and Surname"
+                                )
+
+                            .input-field.input-field_w_50.input-field_offset.input-field_mb_15
+                                input.input-field__input(
+                                    type="email"
+                                    name="email"
+                                    id="contact-email"
+                                    required placeholder="Email"
+                                )
+
+                        .input-field.input-field_w_100.input-field_mb_50
+                            textarea.input-field__textarea(
+                                rows="6"
+                                placeholder="Your message"
+                                id="contact-textarea"
+                                required
+                            )
+
+                        .contact-submit
+                            input(type="submit" name="name" value="SEND")
+
+                .col-lg-5
+                    .map-responsive
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3038.3107204774037!2d49.83217816489402!3d40.40196686446203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x403087882e0fcb75%3A0xda3a719867fd0dc1!2sSayt.az!5e0!3m2!1saz!2s!4v1548832278578" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+                    .contact-us__info
+                        .col-lg-5.col-md-4.col-sm-4.p-0
+                            p Richmond District
+                            p Suite #580
+                            p California, CA 00000
+                        .col-lg-5.col-md-4.col-sm-4.p-0
+                            a(href="") info@cafa.ca
+                            a(href="") (220) 968 87 58
+                            a(href="") (220) 968 87 59

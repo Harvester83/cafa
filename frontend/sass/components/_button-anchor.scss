@@ -1,0 +1,21 @@
+.button-anchor {
+  font-size: 20px;
+  text-align: center;
+  color: #FFFFFF;
+  background-color: $color;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &_mob_w {
+    @media (max-width: 575px) {
+      width: 50%;
+      font-size: 14px;
+      height: 40px;
+    }
+  }
+  &:hover {
+    color: #FFFFFF;
+    background-color: rgba($color, .8);
+  }
+}

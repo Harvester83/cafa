@@ -1,0 +1,118 @@
+extends ../layout/page
+include ../mixins/mixins
+
+block title
+    | register
+
+block content
+    section.pb-100_login
+        .container
+            .row.justify-content-center
+                .col-lg-10.col-md-8
+                    h1.register-headline Register
+
+                    form(action="" method="" id="register-form")
+                        .wrap-form.wrap-form_mb_26
+                           .input-field.input-field_w_50.input-field_offset.input-field_mb
+                                input.input-field__input(
+                                    type="text"
+                                    name="registerFirstName"
+                                    id="registerFirstName"
+                                    placeholder="First Name"
+                                    required
+                                )
+
+                           .input-field.input-field_w_50.input-field_offset.input-field_mb
+                                input.input-field__input(
+                                    type="text"
+                                    name="registerLastName"
+                                    id="registerLastName"
+                                    placeholder="Last Name"
+                                    required
+                                )
+
+                           .input-field.input-field_w_50.input-field_offset.input-field_mb
+                                input.input-field__input(
+                                    type="email"
+                                    name="registerEmail"
+                                    id="registerEmail"
+                                    placeholder="Email"
+                                    required
+                                )
+
+                           .input-field.input-field_flex.input-field_w_50.input-field_offset.input-field_mb
+                                select.input-field__select.input-field__select_w_30
+                                    option(disabled selected) Month
+                                    option(value="January") January
+                                    option(value="Feb") Feb
+                                    option(value="Mar") Mar
+
+                                select.input-field__select.input-field__select_w_30
+                                    option(disabled selected) Day
+                                    option(value="01") 01
+                                    option(value="02") 02
+                                    option(value="03") 03
+
+                                select.input-field__select.input-field__select_w_30
+                                    option(disabled selected) Year
+                                    option(value="1990") 1990
+                                    option(value="1991") 1991
+                                    option(value="1992") 1992
+
+                           .input-field.input-field_flex.input-field_w_50.input-field_offset.input-field_mb.input-field_phone.input-phone_respon
+                                select.input-field__select.input-field__select_mod.input-field__select_phone
+                                    option(data-countrycode="AD" value="376") Andorra (+376)
+                                    option(data-countrycode="AO" value="244") Angola (+244)
+                                    option(data-countrycode="AI" value="1264") Anguilla (+1264)
+                                    option(data-countrycode="AG" value="236") Central African Republic (+236)
+
+                                .input-field__wrap-input
+                                   input.input-field__input(
+                                        type="tel"
+                                        name="registerEmail"
+                                        id="registerPhone"
+                                        required
+                                        placeholder="Phone"
+                                   )
+
+                           .input-field.input-field_w_50.input-field_offset.input-field_mb
+                                input.input-field__input(
+                                    type="text"
+                                    name="registerLogin"
+                                    id="registerLogin"
+                                    placeholder="Login"
+                                    required
+                                )
+
+                           .input-field.input-field_w_50.input-field_offset.input-field_mb
+                                input.input-field__input(
+                                    type="password"
+                                    name="registerPassword"
+                                    id="registerPassword"
+                                    placeholder="Password"
+                                    required
+                                )
+
+                           .input-field.input-field_w_50.input-field_offset.input-field_mb
+                                input.input-field__input(
+                                    type="password"
+                                    name="registerConfirmPassword"
+                                    id="registerConfirmPassword"
+                                    placeholder="Confirm password"
+                                    required
+                                )
+
+                           .input-field.input-field_w_50.input-field_offset.input-field_mb
+                                input.input-field__input(
+                                    type="text"
+                                    name="registerLocation"
+                                    id="registerLocation"
+                                    placeholder="Location"
+                                    required
+                                )
+
+                        .register-input__submit
+                            input.input-field__input(type="submit" name="name" value="REGISTER")
+
+
+

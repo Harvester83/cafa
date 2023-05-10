@@ -1,0 +1,117 @@
+.footer {
+  outline: 1px solid #fff;
+  text-align: center;
+  background-color: $color;
+  background-image: url("../img/svg/map.svg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  color: #fff;
+  padding-top: 80px;
+
+  @media (max-width: 767px) {
+    padding-top: 35px;
+    background-size: 80%;
+  }
+
+  @media (max-width: 575px) {
+    background-position: 50% 40%;
+    background-size: 90%
+  }
+}
+
+.copyright {
+  margin-bottom: 0;
+  text-align: center;
+  padding-bottom: 38px;
+  font-size: 1rem;
+  @media (max-width: 767px) {
+    font-size: 10px;
+  }
+}
+
+.menu-list-wrap {
+  margin-bottom: 1.563rem;
+}
+
+.menu-list {
+  &__item {
+    position: relative;
+    display: inline-block;
+    @media (max-width: 767px) {
+      display: block;
+      text-align: center;
+      padding-right: 0;
+      margin-right: 0;
+      &:not(:last-child) {
+        margin-bottom: 5px;
+      }
+    }
+
+    &:not(:last-child) {
+      padding-right: 1rem;
+      margin-right: 1rem;
+      @media (max-width: 991px) {
+        padding-right: 10px;
+        margin-right: 10px;
+      }
+      @media (max-width: 767px) {
+        padding-right: 0px;
+        margin-right: 0px;
+      }
+      &:after {
+        content: "";
+        @media (max-width: 767px) {
+          content: none;
+        }
+        border-right: 1px solid #F0F0F0;
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        height: 25px;
+      }
+    }
+  }
+
+  &__anchor {
+    font-family: $font-bold;
+    text-transform: uppercase;
+    @media (max-width: 767px) {
+      text-transform: none;
+    }
+    @media (max-width: 575px) {
+      font-size: 14px;
+      font-family: $font;
+    }
+
+    color: #fff;
+    &:hover {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}
+
+.arrow-up {
+  display: none;
+  width: 36px;
+  height: 36px;
+  background: #111B6E;
+  box-shadow: 0px 4px 30px #2F32B6;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  position: relative;
+  @media (max-width: 767px) {
+   display: flex;
+  }
+  &__icon {
+    fill: #fff;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-left: 1px;
+  }
+}

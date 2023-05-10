@@ -1,0 +1,49 @@
+@import "test";
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+a {
+  color: #000C75;
+  transition: all .2s ease-in-out;
+  &:hover {
+    color: #00084d;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+  }
+}
+
+p {
+  margin-bottom: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+.text-default {
+  text-transform: none !important;
+}
+
+.br-rad {
+  border-radius: 5px;
+
+  &_10 {
+    border-radius: 10px;
+  }
+}

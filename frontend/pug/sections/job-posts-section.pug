@@ -1,0 +1,55 @@
+.container.container_mb-mid
+    .row
+        .col-12
+            .header-block.header-block_mb
+                h2.title-h2 Job posts
+                p.lead Classifieds ads in California for Azerbaijanis
+
+    .row.row_mb
+        each val in [1, 2, 3, 4, 5]
+            .col-md-6.col-sm-12.promo-mb
+                .promo
+                    .promo__content
+                        .promo__header
+                            h3.promo__title
+                                a(href="#").promo__title-link Database Programmer
+                            h4.promo__subtitle Identified Talent Solutions
+
+                        .promo__content-wrap
+                            .promo__info
+                                h5.promo__info-title Qualifications:
+                                p.promo__text - PHP - conditional...
+                                    a.promo__more(href="#") read more
+
+                        .promo__meta
+                            a.promo__meta-link(href="#")
+                                +svg('promo__meta-icon','map-marker-02')
+                                | North Hollywood, CA
+
+                    button.promo__button(type="submit") Apply
+
+        .col-md-6.col-sm-12.promo-mb.d-md-block.d-none
+            .promo
+                .promo__content
+                    .promo__header
+                        h3.promo__title
+                            a(href="#").promo__title-link Database Programmer
+                        h4.promo__subtitle Identified Talent Solutions
+
+                    .promo__content-wrap
+                        .promo__info
+                            h5.promo__info-title Qualifications:
+                            p.promo__text Qualifications: - PHP - conditional...
+                                a.promo__more(href="#") read more
+
+                    .promo__meta
+                        a.promo__meta-link(href="#")
+                            +svg('promo__meta-icon','map-marker-02')
+                            | North Hollywood, CA
+
+                button.promo__button(type="submit") Apply
+
+    .text-center
+        a(href="#").button-link.button-link_mod_center
+            +svg("button-link__icon", "plus")
+            span View all

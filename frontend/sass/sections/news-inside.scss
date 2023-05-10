@@ -1,0 +1,151 @@
+.news-inside {
+  margin-top: 103px;
+  margin-bottom: 52px;
+}
+
+.news-inner {
+  background: #fff;
+  padding: 28px 0 32px 41px;
+}
+.news-img__wrap-content {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.news-img__wrap img {
+  width: 100%;
+  height: auto;
+}
+
+.news-img__wrap-text h2{
+  font-size: 28px;
+  color: #111B6E;
+  font-family: $font-bold-montserrat;
+}
+
+.news-img__wrap-text_info {
+  display: flex;
+  align-items: center;
+  color: #111B6E;
+}
+
+.news-img__wrap-text_info a {
+  border-right: 2px solid #FF6955;
+  padding-right: 9px;
+  margin-right: 11px;
+  font-size: 16px;
+  color: #111B6E;
+}
+
+.news-img__wrap-text_info span {
+  margin-bottom: 0;
+  font-family: $font-bold;
+  line-height: 21px;
+  font-size: 16px;
+}
+
+.news-inside__clock {
+  fill: #111B6E;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.news-img__wrap-soc-block {
+  display: flex;
+  align-items: center;
+  height: 59px;
+  background: #EAEDF7;
+  border-right: 8px solid #111B6E;
+  margin-bottom: 30px;
+}
+
+.news-img__wrap-soc-block p{
+  font-size: 20px;
+  font-family: $font-bold;
+  color: #000000;
+  margin-left: 21px;
+  margin-right: 23px;
+}
+
+.news-img__wrap-content {
+  align-items: flex-start;
+}
+
+.news-inside__text {
+  padding-right: 44px;
+}
+
+.news-inside__text p {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.news-inside__text-headline {
+  font-family: $font-bold;
+  line-height: 27px;
+  font-size: 20px;
+  color: #000000;
+  @media (max-width: 767px) {
+    font-size: 16px;
+  }
+}
+
+.news-img__wrap-content {
+  .share {
+    flex-direction: column-reverse;
+    margin-top: 0;
+    padding-bottom: 0;
+    min-width: 210px;
+    margin-left: 10px;
+
+    @media (max-width: 767px) {
+      display: none;
+    }
+  }
+  .share-icon {
+    margin-bottom: 13px;
+  }
+
+  .share-text {
+    margin-right: 0;
+    width: 100%;
+  }
+}
+
+.news-inside__text .share{
+  @media (min-width:768px) {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .news-inner {
+    padding: 15px;
+  }
+  .news-inside__text {
+    padding-right: 0;
+  }
+}
+
+
+@media (max-width: 575px) {
+  .news-img__wrap-text  h2 {
+    font-size: 16px;
+  }
+
+  .news-img__wrap-text_info {
+    a {
+      font-size: 12px;
+    }
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .news-inside__clock {
+    width: 16px;
+    height: 16px;
+  }
+}

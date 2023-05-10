@@ -1,0 +1,36 @@
+.logo {
+  display: flex;
+  margin: 0;
+  @media (max-width: 575px) {
+    width: auto;
+    position: relative;
+  }
+  &_mb_25 {
+    margin-bottom: 1.563rem;
+  }
+  &_mb_50 {
+    margin-bottom: 50px;
+  }
+
+  .w-mob-80 {
+    @media (max-width: 991px) {
+      width: 80px;
+    }
+  }
+
+  &_md_fixed {
+    //outline: 1px solid #fff;
+    @media (max-width: 991px) {
+      left: 15px;
+      z-index: 9999999;
+      position: relative;
+      width: auto;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: auto;
+    margin: auto;
+   }
+}

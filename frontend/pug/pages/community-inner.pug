@@ -1,0 +1,122 @@
+extends ../layout/page
+include ../mixins/mixins
+
+block title
+    | community-inner
+
+block content
+    section.section_pb
+        .container
+            .header-block.header-block_flex.header-block_tab_flex_column.header-block_mb
+                ._wrap-md-flex._wrap-md-flex_mb_15
+                    .text-left
+                        h1.title-h2.mr-3 Community
+                        p.lead.d-lg-block.d-none Find and create threads to get answers
+
+                    form.search.search_diplay-tab(action="#" method="POST")
+                        input(type="search" placeholder="Search...")
+                        label
+                            input(type="submit" )
+                            +svg('search-zoom','zoom')
+
+
+                ._wrap-md-flex
+                    .list-title-wrap.list-title-wrap_mob_w
+                        h4.list-title.list-title_center.list-title_mod Categories
+                            +svg('down-solid_community','down-solid')
+                        ul.list.list_slider
+                            li.list__item
+                                a(href="#").list__item-link.active General
+                            li.list__item
+                                a(href="#").list__item-link Job post
+                            li.list__item
+                                a(href="#").list__item-link Recent admissions
+                            li.list__item
+                                a(href="#").list__item-link Travel
+                            li.list__item
+                                a(href="#").list__item-link Meetups
+                            li.list__item
+                                a(href="#").list__item-link Events
+                            li.list__item
+                                a(href="#").list__item-link Visa
+                            li.list__item
+                                a(href="#").list__item-link Newcomers
+                            li.list__item
+                                a(href="#").list__item-link New policies
+                            li.list__item
+                                a(href="#").list__item-link Other
+
+                    a.button-anchor.button-anchor_mob_w(href="#") Ask a question
+
+
+            .row
+                aside.aside-col
+                    .block-position-fixed
+
+                        form.search.search_mb(action="#" method="POST")
+                            input(type="search" placeholder="Search...")
+                            label
+                                input(type="submit" )
+                                +svg('search-zoom','zoom')
+
+                        h4.list-title Categories
+                        ul.list
+                            li.list__item
+                                a(href="#").list__item-link.active General
+                            li.list__item
+                                a(href="#").list__item-link Job post
+                            li.list__item
+                                a(href="#").list__item-link Recent admissions
+                            li.list__item
+                                a(href="#").list__item-link Travel
+                            li.list__item
+                                a(href="#").list__item-link Meetups
+                            li.list__item
+                                a(href="#").list__item-link Events
+                            li.list__item
+                                a(href="#").list__item-link Visa
+                            li.list__item
+                                a(href="#").list__item-link Newcomers
+                            li.list__item
+                                a(href="#").list__item-link New policies
+                            li.list__item
+                                a(href="#").list__item-link Other
+
+                article.blank-col
+                        section.blank-wrap.blank-wrap_mb
+                            section.info-label.info-label_dark_bg
+                                .info-label__header
+                                    img.info-label__img.info-label__img_m(src="http://i.pravatar.cc/30?img=13")
+                                    p <span class="info-label__span">johndoe</span> asked this 19 hours ago
+
+                                .info-label__meta-wrap
+                                    .info-label__meta.info-label__meta_mr
+                                        +svg('info-label__meta-icon info-label__meta-icon_mr', 'eye')
+                                        span.info-label__meta-data 100
+
+                            section.blank-layout
+                                .title-h3.title-h3_montserrat What is the best way to get American Visa?
+                                p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.This book is a treatise on the theory of ethics, very popular during the Renaissance.This book is a treatise on the theory of ethics, very popular during the Renaissance.This book is a treatise on the theory of ethics, very popular during the Renaissance.
+
+                                .info-label__meta.info-label__meta_mt
+                                    +svg('info-label__meta-icon info-label__meta-icon_mod', 'like')
+                                    span.info-label__meta-data.info-label__meta-data_mod 53
+
+                        section.message-block.message-block_mb
+                            section.info-label
+                                .info-label__header
+                                    img.info-label__img.info-label__img_m(src="http://i.pravatar.cc/30?img=13")
+                                    p <span class="info-label__span">johndoe</span> asked this 19 hours ago
+
+                            .paragraph-indent
+                                p Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece. Lorem ipsum dolor sit amet.
+
+                        form
+                            h4.title-h4 Write a reply
+                            textarea.messsage-textarea(rows="4")
+
+                        p.note <a class="font-bold" href="#">Login</a> or <a class="font-bold" href="#">Register</a> to write a reply
+
+
+
+

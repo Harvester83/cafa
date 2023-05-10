@@ -1,0 +1,67 @@
+extends ../layout/page
+include ../mixins/mixins
+
+block title
+    | events-page
+
+block content
+    section.section_pb
+        .container.container_tab_100
+            h1.title-h1.title-h1_border-lg Upcoming Events
+            .row.row_mb
+                each val in [1, 2, 3]
+                    .col-lg-4.col-sm-6.col-12.block-wrap.block_js
+                        .block.block_off-
+                            .block__meta
+                                .block__date Feburary 02, <br>2019
+
+                            .block__header
+                                div.block__header-block
+                                    h3.block__title Event name
+                                    p.block__desc 350/500 Test is some update on our Azerbaijani night event in San Diego on 21st of December, 2018. Chef Leyla has prepared for us an amazing menu which includes:
+
+
+                                a(href="habr.ru").block__button
+                                    +svg('block__button-icon', 'arrow-link')
+                                    span.block__button-text book now
+
+                            img.block__img(src="https://picsum.photos/350/500?image=579")
+
+                            .block__cover
+                                .block__cover-in
+                each val in [1, 2, 3]
+                    .col-lg-4.col-sm-6.col-12.block-wrap.block_js
+                        .block
+                            .block__meta
+                                .block__date Feburary 02, <br>2019
+
+                            .block__header
+                                div.block__header-block
+                                    h3.block__title Event name
+                                    p.block__desc 350/500 Here is some update on our Azerbaijani night event in San Diego on 21st of December, 2018. Chef Leyla has prepared for us an amazing menu which includes:
+
+
+                                a(href="habr.ru").block__button
+                                    +svg('block__button-icon', 'arrow-link')
+                                    span.block__button-text book now
+
+                            img.block__img(src="https://picsum.photos/350/500?image=579")
+
+                            .block__cover
+                                .block__cover-in
+
+            ul.pagination-list
+                li.pagination-list__item.pagination-list__item_dirrect
+                    a(href="#").pagination-list__item-link
+                        +svg('pagination-list__icon', 'double-arrow')
+
+                li.pagination-list__item
+                    a(href="#").pagination-list__item-link.active 1
+
+                each val in [2, 3, 4, 5, 6]
+                    li.pagination-list__item
+                        a(href="#").pagination-list__item-link=val
+
+                li.pagination-list__item.pagination-list__item_dirrect
+                    a(href="#").pagination-list__item-link
+                        +svg('pagination-list__icon pagination-list__icon_rt', 'double-arrow')

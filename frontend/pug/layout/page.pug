@@ -1,0 +1,33 @@
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+        meta(name="msapplication-TileColor" content="#da532c")
+        meta(name="theme-color" content="#ffffff")
+        link(href="css/app.min.css" rel="stylesheet" type="text/css" media="all")
+        link(rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png")
+        link(rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png")
+        link(rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png")
+        link(rel="manifest" href="img/favicon/site.webmanifest")
+        link(rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#ffffff")
+        meta(name="theme-color" content="#ffffff")
+        title
+            block title
+        script(src='js/bundle.js')
+    body
+        header.header.header_bg
+            .container
+                .row
+                    .col-xl-12
+                        .menu-block.menu-block_md_fixed
+                            h1.logo.logo_md_fixed
+                                a(href="#")
+                                    img.logo__img.w-mob-80(src="img/logo.png")
+
+                            include ../components/menu
+
+        .main.main_page-mod
+            block content
+
+        include ../sections/footer

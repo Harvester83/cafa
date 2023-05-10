@@ -1,0 +1,10 @@
+.aside-col {
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  flex: 0 0 30%;
+  max-width: 30%;
+  @media (max-width: 991px) {
+    display: none;
+  }
+}

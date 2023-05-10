@@ -1,0 +1,56 @@
+nav.navbar.navbar-expand-lg
+    button(class="navbar-toggler navbar-toggler_md_fixed"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation")
+        #nav-icon
+            span
+            span
+
+    .navbar-collapse.collapse(id="navbarSupportedContent")
+        ul.navbar-nav.mr-auto
+            li.nav-li
+                a.nav-link.active(href="#") Home
+            li.nav-li
+                a.nav-link(href="#") Community
+                ul(class='nav__menu-lists nav__menu--2-lists')
+                    each val in ['Menu 1', 'Menu 2', 'Menu 3', 'Menu 4', 'Menu 5']
+                        li(class='nav__menu-items')
+                            a(href="#")= val
+
+            li.nav-li
+                a.nav-link(href="#") About us
+            li.nav-li
+                a.nav-link(href="#") Events
+            li.nav-li
+                a.nav-link(href="#") Job posts
+
+
+            //each val in [1, 2, 3, 4, 5, 6, 6]
+                li.nav-li
+                    a.nav-link(href="#") About us
+                li.nav-li
+                    a.nav-link(href="#") Events
+                li.nav-li
+                    a.nav-link(href="#") Job posts
+
+            li.nav-li
+                a.nav-link(href="#") News
+                ul(class='nav__menu-lists nav__menu--2-lists')
+                    each val in ['Etiam', 'Lectus', 'Netus', 'Dictum', 'Nibh']
+                        li(class='nav__menu-items')
+                            a(href="#")= val
+            li.nav-li
+                a.nav-link(href="#") Blog
+            li.nav-li
+                a.nav-link(href="#") Media
+            li.nav-li
+                a.nav-link(href="#") Contact us
+            li.nav-li.nav-li_accent
+                a.nav-link.nav-link_flex.nav-link_accent(href="#")
+                    +svg("nav-link-icon", "user")
+                    | Login
+

@@ -1,0 +1,42 @@
+.header {
+  position: relative;
+  &_mod-main {
+    position: absolute;
+    width: 100%;
+    z-index: 200;
+  }
+
+  &_bg {
+    background-color: $color;
+  }
+}
+
+.menu-block {
+  display: flex;
+  justify-content: space-between;
+  transition: all .2s ease-in-out;
+  @media (max-width: 1199px) {
+    padding: 15px 0;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 32px 0;
+  }
+
+  &_md_fixed {
+    @media (max-width: 991px) {
+      background-color: rgba($color, 1);
+      width: 100%;
+      position: fixed;
+      left: 0;
+      z-index: 999999999999;
+    }
+  }
+
+  &_bg {
+    @media (max-width: 991px) {
+      background-color: rgba($color, .8);
+    }
+  }
+}
+
